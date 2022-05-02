@@ -43,8 +43,6 @@ const Single = () => {
                         <Chart2 aspect={2 / 1} title="User's Knowledge" />
                         <Chart3 aspect={2 / 1} title="User's Knowledge" />
                         <Chart4 aspect={2 / 1} title="User's Knowledge" />
-
-
                     </div>
                 </div>
                 <div className="bottom">

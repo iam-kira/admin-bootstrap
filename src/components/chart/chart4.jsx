@@ -17,10 +17,10 @@ const Chart4 = ({ aspect, title }) => {
     return (
         <div className='chart'>
             <div className="title">{title}</div>
-            <ResponsiveContainer width="100%" aspect={aspect}>
+            <ResponsiveContainer aspect={aspect}>
                 <PieChart width={730} height={250}>
-                    <Pie data={data} dataKey="Total" nameKey="Name" cx="50%" cy="50%" outerRadius={50} fill="#DEB6AB" />
-                    <Pie data={data} dataKey="Rate" nameKey="Name" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#85586F" label />
+                    <Pie data={data} dataKey="Total" nameKey="Name" cx="50%" cy="50%" outerRadius={70} fill="#DEB6AB" />
+                    <Pie data={data} dataKey="Rate" nameKey="Name" cx="50%" cy="50%" innerRadius={80} outerRadius={100} fill="#85586F" label />
                 </PieChart>
             </ResponsiveContainer>
         </div>
