@@ -1,6 +1,4 @@
 .sidebar {
-    // color: white;
-    // background-color: black; 
     border-right: 2px solid rgb(158, 222, 166);
     flex: 1;
     min-height: 100vh;
@@ -15,7 +13,7 @@
         .logo {
             font-size: 20px;
             font-weight: bold;
-            color: rgb(0, 0, 0);
+            color: rgb(84, 84, 84);
         }
 
             
@@ -40,7 +38,7 @@
                 margin-bottom: 5px;
             }
             li{
-                display: flew;
+                display: flex;
                 align-items: center;
                 padding: 5px;
                 cursor: pointer;

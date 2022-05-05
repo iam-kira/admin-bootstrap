@@ -1,0 +1,106 @@
+.app.dark {
+    background-color: rgb(29, 29, 29);
+    color: #fff;
+
+    .chartGrid {
+        stroke: rgba(228, 228, 228, 0.219);
+    }
+
+    .table {
+        background-color: rgb(46, 46, 46);
+
+        .tableCell {
+            color: rgb(198, 198, 198);
+        }
+    }
+
+    .navbar {
+        background-color: rgb(0, 0, 0);
+        color: #fff;
+
+        .wrapper {
+            .search {
+                input {
+                    &::placeholder {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .sidebar {
+        background-color: rgb(0, 0, 0);
+
+        .top {
+            .logo {
+                color: #999;
+            }
+        }
+
+        ul {
+            li {
+                &:hover {
+                    background-color: #333;
+                }
+
+                span {
+                    color: rgb(221, 221, 221);
+                }
+
+                .icon {
+                    color: rgba(50, 205, 50, 0.805);
+                }
+            }
+        }
+    }
+
+
+    .datatable {
+
+        .datagrid {
+            color: rgb(156, 155, 155);
+            border: none;
+
+            .viewButton {
+                color: rgb(103, 103, 255);
+                border: 1px dotted rgb(180, 180, 255);
+            }
+
+            .deleteButton {
+                color: rgb(222, 29, 68);
+                border: 1px dotted rgba(255, 98, 129, 0.762);
+            }
+
+            .cellWithStatus {
+                padding: 5px;
+                border-radius: 5px;
+
+                &.active {
+                    background-color: rgba(152, 255, 152, 0.105);
+                    color: rgb(0, 255, 0);
+                }
+
+                &.pending {
+                    background-color: rgba(255, 235, 123, 0.1);
+                    color: rgb(255, 183, 0);
+                }
+
+                &.passive {
+                    background-color: rgba(153, 97, 97, 0.196);
+                    color: rgb(255, 0, 0);
+                }
+            }
+        }
+    }
+
+input{
+    background-color: transparent;
+    color: #fff;
+    &::placeholder {
+        color: rgb(132, 132, 132);
+    }
+}
+
+}

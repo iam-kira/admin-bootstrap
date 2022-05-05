@@ -2,6 +2,22 @@
     height: 500px;
     padding: 20px;
 
+.databaseTitle {
+    width: 100%;
+    font-size: 24px;
+    color: gray;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .link {
+        background-color: rgba(128, 0, 128, 0.11);
+        border: 1px solid purple;
+        padding: 3px;
+        border-radius: 5px;
+    }
+}
     .cellWithImg {
         display: flex;
         align-items: center;

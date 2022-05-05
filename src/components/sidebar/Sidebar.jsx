@@ -10,15 +10,22 @@ import RestorePageRoundedIcon from '@mui/icons-material/RestorePageRounded';
 import SettingsIcon from '@mui/icons-material/Settings';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
+import { Link } from 'react-router-dom'
+import { DarkModeContext } from '../../context/darkModeContext';
+import { useContext } from 'react';
 
 
 const Sidebar = () => {
+    const { dispatch } = useContext(DarkModeContext)
+
     return (
         <div className="sidebar">
             <div className="top">
+                <Link to="/" style={{ textDecoration: "none" }}>
                 <span className="logo">
-                    admin
-                </span>
+                        Admin
+                    </span>
+                </Link>
             </div>
             <hr />
             <div className="center">
@@ -26,8 +33,12 @@ const Sidebar = () => {
                     <p className="title">MAIN</p>
                     <li><DashboardIcon className="icon" /><span>Dashboard</span></li>
                     <p className="title">LISTS</p>
+                    <Link to="/users" style={{ textDecoration: "none" }}>
                     <li><PersonIcon className="icon" /><span>Users</span></li>
+                    </Link>
+                    <Link to="/products" style={{ textDecoration: "none" }}>
                     <li><ShoppingCartRoundedIcon className="icon" /><span>Products</span></li>
+                    </Link>
                     <li><CreditCardRoundedIcon className="icon" /><span>Orders</span></li>
                     <p className="title">SERVICES</p>
                     <li><NotificationsIcon className="icon" /><span>Notification</span></li>
@@ -41,8 +52,12 @@ const Sidebar = () => {
                 </ul>
             </div>
             <div className="bottom">
-                <div className="colorOption"></div>
-                <div className="colorOption"></div>
+                <div className="colorOption"
+                    onClick={() => dispatch({ type: "LIGHT" })}
+                ></div>
+                <div className="colorOption"
+                    onClick={() => dispatch({ type: "DARK" })}
+                ></div>
                 {/* <div className="colorOption"></div> */}
             </div>
         </div>

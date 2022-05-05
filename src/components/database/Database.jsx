@@ -1,18 +1,30 @@
 import './Database.scss'
 import { DataGrid } from '@mui/x-data-grid';
 import { userColumns, userRows } from '../../db';
-
+import { Link } from 'react-router-dom'
+import { Button } from '@mui/material'
+import AddCircleOutlinedIcon from '@mui/icons-material/AddCircleOutlined'
+import { useState } from 'react';
 
 
 const Database = () => {
 
+    const [data, setData] = useState(userRows)
+    
+    const itemDelete = (id) => {
+        setData(data.filter(item=>item.id !== id))
+        
+    }
+
     const actionColumn = [{
         field: "action", headerName: "Action", width: 200,
-        renderCell: () => {
+        renderCell: (params) => {
             return (
                 <div className="cellAction">
+                    <Link to="/users/test" style={{ textDecoration: "none" }}>
                     <div className="viewButton">View</div>
-                    <div className="deleteButton">Delete</div>
+                    </Link>
+                    <div className="deleteButton" onClick={()=>itemDelete(params.row.id)}>Delete</div>
 
                 </div>
             )
@@ -22,10 +34,16 @@ const Database = () => {
     ]
 
     return (
-        <div className='datatable'
-        >
+        <div className='datatable'>
+            <div className="databaseTitle">
+                Add New User
+                <Link to="/users/new" className='link' style={{ textDecoration: "none" }}>
+                    <Button color='secondary' size="string" aria-label="add" endIcon="Add"><AddCircleOutlinedIcon /></Button>
+                </Link>
+            </div>
             <DataGrid
-                rows={userRows}
+                className="datagrid"
+                rows={data}
                 columns={userColumns.concat(actionColumn)}
                 pageSize={10}
                 rowsPerPageOptions={[6]}
