@@ -38,10 +38,11 @@ const Widget = ({ type }) => {
             data = {
                 title: "WORKOUTS",
                 isMoney: true,
-                link: "View net earnings",
-                icon: (<MonetizationOnOutlinedIcon className='icon'
-                    style=
-                    {{ color: "green", backgroundColor: "rgba(0,218,0,0.2)", }} />),
+                link: "View all workouts",
+                icon:"",
+                    // (<MonetizationOnOutlinedIcon className='icon'
+                    // style=
+                    // {{ color: "green", backgroundColor: "rgba(0,218,0,0.2)", }} />),
             };
             break;
         case "balance":
@@ -49,12 +50,11 @@ const Widget = ({ type }) => {
                 title: "DIET",
                 isMoney: true,
                 link: "See details",
-                icon: (
-                    <AccountBalanceWalletOutlinedIcon className='icon'
-                    style=
-                    {{ color: "purple", backgroundColor: "rgba(128,0,128,0.2)", }}
-    />
-                    ),
+                icon:"",
+    //                 (
+    //                 <AccountBalanceWalletOutlinedIcon className='icon'
+    //                 style=
+    //                 {{ color: "purple", backgroundColor: "rgba(128,0,128,0.2)", }}/> ),
             };
             break;
         default:
