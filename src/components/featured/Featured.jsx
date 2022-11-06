@@ -16,7 +16,7 @@ const Featured = () => {
 				<div className="featuredChart">
 					<CircularProgressbar value={70} text='70%' strokeWidth={5} />
 				</div>
-				<p className="title">Total sales made today.</p>
+				<p className="title">Total calories burned today.</p>
 				<p className="amount">$324</p>
 				<p className="desc">I guess, Iam pushing my limits too much. </p>
 				<div className="summary">

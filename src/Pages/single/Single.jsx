@@ -50,7 +50,7 @@ const Single = () => {
                     </div>
                 </div>
                 <div className="bottom">
-                    <div className="title">Last Transactions</div>
+                    <div className="title">Last Month Workouts</div>
                     <List />
                 </div>
             </div>
