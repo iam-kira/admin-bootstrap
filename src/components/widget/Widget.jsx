@@ -36,7 +36,7 @@ const Widget = ({ type }) => {
             break;
         case "earnings":
             data = {
-                title: "EARNING",
+                title: "WORKOUTS",
                 isMoney: true,
                 link: "View net earnings",
                 icon: (<MonetizationOnOutlinedIcon className='icon'
@@ -46,12 +46,15 @@ const Widget = ({ type }) => {
             break;
         case "balance":
             data = {
-                title: "BALANCE",
+                title: "DIET",
                 isMoney: true,
                 link: "See details",
-                icon: (<AccountBalanceWalletOutlinedIcon className='icon'
+                icon: (
+                    <AccountBalanceWalletOutlinedIcon className='icon'
                     style=
-                    {{ color: "purple", backgroundColor: "rgba(128,0,128,0.2)", }} />),
+                    {{ color: "purple", backgroundColor: "rgba(128,0,128,0.2)", }}
+    />
+                    ),
             };
             break;
         default:

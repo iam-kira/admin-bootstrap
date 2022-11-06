@@ -37,7 +37,7 @@ const Sidebar = () => {
                     <li><PersonIcon className="icon" /><span>Users</span></li>
                     </Link>
                     <Link to="/products" style={{ textDecoration: "none" }}>
-                    <li><ShoppingCartRoundedIcon className="icon" /><span>Products</span></li>
+                    <li><ShoppingCartRoundedIcon className="icon" /><span>Recipes</span></li>
                     </Link>
                     <li><CreditCardRoundedIcon className="icon" /><span>Orders</span></li>
                     <p className="title">SERVICES</p>
